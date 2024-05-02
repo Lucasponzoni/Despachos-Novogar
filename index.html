@@ -3,57 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escáner de Datos</title>
+  <title>Scan Project</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container mt-5">
-    <h1>Escáner de Datos</h1>
-    <div class="form-group">
-      <label for="clienteInput">Número de Cliente:</label>
-      <input type="text" class="form-control" id="clienteInput" autofocus>
-    </div>
-    <div class="form-group">
-      <label for="remitoInput">Número de Remito:</label>
-      <input type="text" class="form-control" id="remitoInput">
-    </div>
-    <div class="form-group">
-      <label for="etiquetaInput">Número de Etiqueta:</label>
-      <input type="text" class="form-control" id="etiquetaInput">
-    </div>
-    <div class="form-group">
-      <label for="emailInput">Correo Electrónico:</label>
-      <input type="email" class="form-control" id="emailInput">
-    </div>
-    <button type="button" class="btn btn-primary" onclick="cargarDatos()">Cargar</button>
+
+<div class="container">
+  <h1>Envios Novogar</h1>
+  <div class="form-group">
+    <input type="text" class="form-control" id="clienteInput" placeholder="Número de cliente">
   </div>
-
-  <div class="container mt-5">
-    <h2>Datos Cargados</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Fecha y Hora</th>
-          <th>Número de Remito</th>
-          <th>Número de Cliente</th>
-          <th>Número de Etiqueta</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody id="tablaDatos">
-      </tbody>
-    </table>
-    <nav aria-label="Page navigation">
-      <ul class="pagination" id="pagination">
-      </ul>
-    </nav>
+  <div class="form-group">
+    <input type="text" class="form-control" id="remitoInput" placeholder="Número de remito">
   </div>
-    <!-- Firebase scripts -->
-<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js"></script>
+  <div class="form-group">
+    <input type="text" class="form-control" id="etiquetaInput" placeholder="Número de etiqueta">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="emailInput" placeholder="Email">
+  </div>
+  <button class="btn btn-primary" onclick="cargarDatos()">Cargar</button>
+</div>
 
-<!-- Tu script personalizado -->
-<script src="scripts.js"></script>
+<div class="container mt-5">
+  <h2>Tabla de Datos</h2>
+  <table id="dataTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Fecha y Hora</th>
+        <th>Número de Remito</th>
+        <th>Número de Cliente</th>
+        <th>Número de Etiqueta</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="dataBody">
+      <!-- Aquí se cargarán los datos dinámicamente con JavaScript -->
+    </tbody>
+  </table>
+</div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

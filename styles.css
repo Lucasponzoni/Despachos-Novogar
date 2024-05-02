@@ -1,32 +1,73 @@
-/* Estilo para el contenedor principal */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+/* Estilos personalizados */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
   }
   
-  /* Estilo para los campos de entrada */
+  .container {
+    margin-top: 50px;
+  }
+  
+  /* Estilos para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #dee2e6;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Estilos para los inputs y botón */
   .form-group {
     margin-bottom: 20px;
   }
   
-  /* Estilo para el botón de carga */
   .btn-primary {
-    margin-top: 20px;
+    background-color: #007bff;
+    border-color: #007bff;
   }
   
-  /* Estilo para la tabla de datos */
-  .table {
-    width: 100%;
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
   }
   
-  /* Estilo para la paginación */
+  /* Estilos para la cabecera */
+  h1 {
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  h2 {
+    margin-top: 40px;
+    color: #007bff;
+  }
+  
+  /* Estilos para la paginación */
   .pagination {
     justify-content: center;
-    margin-top: 20px;
   }
   
-  /* Estilo para los botones de paginación */
   .page-link {
-    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .page-link:hover {
+    color: #0056b3;
   }
   
