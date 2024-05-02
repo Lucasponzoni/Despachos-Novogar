@@ -1,7 +1,15 @@
 // Inicializar Firebase
 const firebaseConfig = {
-    // Tu configuración de Firebase aquí
-  };
+  apiKey: "AIzaSyBIXlgOct2UzkrZbZYbyHu6_NbLDzTqqig",
+  authDomain: "despachos-novogar.firebaseapp.com",
+  databaseURL: "https://despachos-novogar-default-rtdb.firebaseio.com",
+  projectId: "despachos-novogar",
+  storageBucket: "despachos-novogar.appspot.com",
+  messagingSenderId: "346020771441",
+  appId: "1:346020771441:web:c4a29c0db4200352080dd0",
+  measurementId: "G-64DDP7D6Q2"
+};
+
   firebase.initializeApp(firebaseConfig);
   const database = firebase.database();
   
@@ -23,12 +31,6 @@ const firebaseConfig = {
       email: email
     });
   
-    // Limpiar los campos de entrada
-    document.getElementById('clienteInput').value = '';
-    document.getElementById('remitoInput').value = '';
-    document.getElementById('etiquetaInput').value = '';
-    document.getElementById('emailInput').value = '';
-  
     // Mostrar datos en la tabla
     mostrarDatos(timestamp, cliente, remito, etiqueta, email);
   }
@@ -45,6 +47,12 @@ const firebaseConfig = {
                     </tr>`;
     tableBody.insertAdjacentHTML('afterbegin', newRow);
   }
+
+      // Limpiar los campos de entrada
+      document.getElementById('clienteInput').value = '';
+      document.getElementById('remitoInput').value = '';
+      document.getElementById('etiquetaInput').value = '';
+      document.getElementById('emailInput').value = '';
   
   // Escuchar cambios en la base de datos de Firebase y mostrarlos
   database.ref('datos').on('child_added', (snapshot) => {
