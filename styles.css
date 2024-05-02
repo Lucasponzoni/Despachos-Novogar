@@ -1,0 +1,32 @@
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Estilo para los campos de entrada */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el botón de carga */
+  .btn-primary {
+    margin-top: 20px;
+  }
+  
+  /* Estilo para la tabla de datos */
+  .table {
+    width: 100%;
+  }
+  
+  /* Estilo para la paginación */
+  .pagination {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para los botones de paginación */
+  .page-link {
+    cursor: pointer;
+  }
+  
